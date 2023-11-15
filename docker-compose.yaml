@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  angular-websocket:
+    container_name: angular-websocket
+    image: registry.rnd.teras.dev/rnd/angular-websocket:0.1.1
+    ports:
+      - 8080:80
+    restart: always
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    platform: "linux/amd64"

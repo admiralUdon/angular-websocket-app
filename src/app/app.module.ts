@@ -3,8 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from 'app/app-routing.module';
 import { AppComponent } from 'app/app.component';
 import { SocketIoConfig, SocketIoModule } from 'ngx-socket-io';
+import { environment } from 'environments/environment';
 
-const config: SocketIoConfig = { url: 'ws://localhost:3000', options: {} };
+const config: SocketIoConfig = { url: environment.apis?.websocket, options: {} };
 
 @NgModule({
     declarations: [
